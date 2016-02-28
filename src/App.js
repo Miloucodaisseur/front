@@ -1,9 +1,17 @@
 import React from 'react';
+import ArtListing from './ArtListing'
 
 class App extends React.Component {
+  constructor(){
+    super();
+  }
+
     render() {
         return (
-            <h1>Hello World!</h1>
+          <div>
+          <h1>List of various paintings and photographs</h1>
+            <ArtListing />
+          </div>
         );
     }
 }
