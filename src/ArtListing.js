@@ -1,6 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
-import Artitem from 'Artitem';
+import ArtItem from './ArtItem';
 
 class ArtListing extends React.Component {
   constructor() {
@@ -9,10 +9,15 @@ class ArtListing extends React.Component {
     this.state = {
       arts: []
     };
+console.log(this.state.arts);
   }
+
 
   componentDidMount() {
     let component = this;
+
+    jQuery.getJSON("http://damp-wave-16968.herokuapp.com/arts", function(data) {
+     console.log("getting data");
 
     component.setState({
       arts: data.arts
@@ -23,9 +28,10 @@ class ArtListing extends React.Component {
 render() {
   return (
     <div>
+    <h1>List of Art</h1>
     {this.state.arts.map(function(art, i) {
       return(
-        <ArtItem key={art.id} id={art.id} name={art.name} description={art.description} origin={art.origin} origin_date={art.origin_date} rating={art.rating} />
+        <ArtItem key={art.id} id={art.id} name={art.name} description={art.description} origin={art.origin} rating={art.rating} />
       );
     })}
   </div>

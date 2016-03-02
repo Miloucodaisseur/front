@@ -8,10 +8,10 @@ class App extends React.Component {
 
     render() {
         return (
-          <div>
+          <section>
           <h1>List of various paintings and photographs</h1>
             <ArtListing />
-          </div>
+          </section>
         );
     }
 }
