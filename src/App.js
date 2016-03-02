@@ -1,17 +1,22 @@
 import React from 'react';
 import ArtListing from './ArtListing'
+import { Link } from 'react-router';
 
 class App extends React.Component {
-  constructor(){
-    super();
-  }
+  // constructor(){
+  //   super();
+  // }
 
     render() {
         return (
-          <section>
-          <h1>List of various paintings and photographs</h1>
-            <ArtListing />
-          </section>
+          <div className>
+            <nav>
+              <ul>
+                <li><Link to="/">Home</Link></li>
+                </ul>
+            </nav>
+            {this.props.children}
+          </div>
         );
     }
 }

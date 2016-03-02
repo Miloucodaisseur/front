@@ -31,10 +31,9 @@ class Art extends React.Component {
   render() {
     return(
       <div>
-        <h1>{this.state.art.name}</h1>
-        <h2>Author: {this.state.art.description}</h2>
-        <p><strong>Summary:</strong> {this.state.art.origin}</p>
-        <p><strong>Publication date:</strong> {this.state.art.origin_date}</p>
+        <h1><strong>Name:</strong> {this.state.art.name} ({this.state.art.rating})</h1>
+        <h2><strong>Description:</strong> {this.state.art.description}</h2>
+        <p><strong>Origin:</strong> {this.state.art.origin}</p>
 
         <ReviewList artId={this.props.params.artId} />
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import jQuery from 'jquery';
+import { Link } from 'react-router';
 
 
 class ArtItem extends React.Component {
@@ -11,8 +12,6 @@ componentDidMount(){
   this.setState({
     id: this.props.id,
     name: this.props.name,
-    description: this.props.description,
-    origin: this.props.origin,
     rating: this.props.rating,
     created_at: this.props.created_at,
     updated_at: this.props.updated_at
@@ -22,11 +21,7 @@ componentDidMount(){
 render() {
   return(
     <div>
-    <ul>
-    <li><strong>{this.state.name} ({this.state.rating})</strong></li>
-    <li><em>Description:</em> {this.state.description}</li>
-    <li><em>Origin:</em> {this.state.origin}</li>
-    </ul>
+  <li><Link to={'/arts/${this.state.id}'}>{this.state.name}</Link> {this.state.rating}</li>
     </div>
   )
  }
