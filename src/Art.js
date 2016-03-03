@@ -36,7 +36,7 @@ class Art extends React.Component {
         <h1><strong>Name:</strong> {this.state.art.name} ({this.state.art.rating})</h1>
         <h2><strong>Description:</strong> {this.state.art.description}</h2>
         <p><strong>Origin:</strong> {this.state.art.origin}</p>
-
+<ReviewList ArtId={this.props.params.artId} />
 
       </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import JQuery from 'jquery';
 import ReviewForm from './ReviewForm';
+import ReviewItem from "./ReviewItem";
 
 class ReviewList extends React.Component {
   constructor() {
