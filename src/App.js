@@ -1,11 +1,11 @@
 import React from 'react';
-import ArtListing from './ArtListing'
+import ArtListing from './ArtListing';
 import { Link } from 'react-router';
 
 class App extends React.Component {
-  // constructor(){
-  //   super();
-  // }
+  constructor(){
+    super();
+  }
 
     render() {
         return (

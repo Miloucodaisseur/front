@@ -1,6 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 import ArtItem from './ArtItem';
+import { Link } from 'react-router';
 
 class ArtListing extends React.Component {
   constructor() {
@@ -16,7 +17,7 @@ console.log(this.state.arts);
   componentDidMount() {
     let component = this;
 
-    jQuery.getJSON("http://damp-wave-16968.herokuapp.com/arts", function(data) {
+    jQuery.getJSON("http://damp-wave-16968.herokuapp.com/arts/", function(data) {
      console.log("getting data");
 
     component.setState({
@@ -33,7 +34,7 @@ render() {
       return(
         <ArtItem key={art.id} id={art.id} name={art.name} description={art.description} origin={art.origin} rating={art.rating} />
       );
-    })}
+    }, this)}
   </div>
   );
  }

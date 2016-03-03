@@ -6,6 +6,11 @@ import { Link } from 'react-router';
 class ArtItem extends React.Component {
   constructor() {
     super();
+
+    this.state = {
+      id: null,
+      name: ""
+    };
   }
 
 componentDidMount(){
@@ -21,7 +26,7 @@ componentDidMount(){
 render() {
   return(
     <div>
-  <li><Link to={'/arts/${this.state.id}'}>{this.state.name}</Link> {this.state.rating}</li>
+  <li><Link to={`/arts/${this.state.id}`}>{this.state.name}</Link> {this.state.rating}</li>
     </div>
   )
  }

@@ -6,11 +6,12 @@ import ArtListing from './ArtListing';
 import Art from './Art';
 import PageNotFound from './PageNotFound';
 
+
 ReactDOM.render((
   <Router history={browserHistory}>
   <Route path="/" component={App}>
   <IndexRoute component={ArtListing} />
-  <Route path="/art/:artId" component={Art}/>
+  <Route path="/arts/:artId" component={Art}/>
   <Route path="*" component={PageNotFound}/>
   </Route>
   </Router>
